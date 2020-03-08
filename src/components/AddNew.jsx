@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import SpeechRecognition from "react-speech-recognition";
 import { ReactMic } from 'react-mic';
-// import Modal from 'react-responsive-modal';
-// import M from 'materialize-css';
 
 const propTypes = {
 	// Props injected by SpeechRecognition
@@ -22,11 +20,6 @@ const Dictaphone = ({
 	stopListening,
 	addNewNote
 }) => {
-
-	// useEffect(() => {
-	// 	M.AutoInit()
-	// }, [])
-
 	const [isListening, setIsListening] = useState(false)
 	const [note, setNote] = useState()
 	const [record, setRecord] = useState(false)
