@@ -64,11 +64,17 @@ const Dictaphone = ({
 		setNote('')
 		resetTranscript()
 	}
+
+	const handleReset = e =>{
+		resetTranscript()
+		setRecord(false)
+		setRecord(true)
+	}
+
 	return (
 		<div className='AddNew'>
-
 			<h3 className='center-align'>Add New Note</h3>
-			{isListening && <button className='btn green lighten-1' onClick={resetTranscript}>Reset</button>}
+			{isListening && <button className='btn green lighten-1' onClick={handleReset}>Reset</button>}
 			<span>{transcript}</span>
 
 			<div className="center container">

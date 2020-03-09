@@ -37,3 +37,14 @@ body{
 .trancsript  ::placeholder{
   color: #333;
 }
+
+/* "start": "node server.js", */
+
+@media only screen and (max-device-width: 480px) {
+  .sound-wave{
+    max-width: 80%;
+  }
+  audio{
+    max-width: 90%;
+  }
+}
