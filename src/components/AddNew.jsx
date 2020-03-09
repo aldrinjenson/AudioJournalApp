@@ -26,9 +26,9 @@ const Dictaphone = ({
 	const [audio, setAudio] = useState()
 	const [title, setTitle] = useState()
 
-//	if (!browserSupportsSpeechRecognition) {
-//		return 'Sorry, your browser is outdated, try using the latest version of Chrome';
-//	}
+	if (!browserSupportsSpeechRecognition) {
+		return 'Sorry, your browser is outdated, try using the latest version of Chrome';
+	}
 
 
 	const handleChange = () => {
@@ -88,7 +88,7 @@ const Dictaphone = ({
 			</div> {/*  container */}
 
 			{
-				// note &&
+				note &&
 				<div className="trancsript green lighten-4 ">
 					<form onSubmit={handleSubmit} className="input-field container">
 						<input onChange={e => setTitle(e.target.value)} value={title} placeholder='Enter Title' type="text" required />
