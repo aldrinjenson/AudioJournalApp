@@ -19,6 +19,16 @@ const App = () => {
     console.log(e)
     setSearchField(e)
   }
+
+  const Delete = time =>{
+    // const 
+    console.log(time);
+    const newNoteList = notes.filter(note=>{
+      return note.time != time
+    })
+    setNotes(newNoteList)    
+  }
+
   const noteList = notes.filter(note => {
     return note.content.toLowerCase().includes(searchField.toLowerCase())
   })
@@ -28,7 +38,7 @@ const App = () => {
     <div className='App '>
       <Landing/>
       <SearchBar Search={Search} />
-      <ListNotes notes={noteList} />
+      <ListNotes notes={noteList} Delete={Delete} />
       <AddNew addNewNote={addNewNote} />
     </div>
   )

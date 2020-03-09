@@ -33,3 +33,7 @@ body{
   position: relative;
   top: 25vh;
 }
+
+.trancsript  ::placeholder{
+  color: #333;
+}

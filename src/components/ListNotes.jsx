@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ListNotes = ({ notes }) => {
+const ListNotes = ({ notes, Delete }) => {
 
     const noteList = notes? notes.map(note=>(<div key={note.time}> 
         <li className="collection-item avatar">
@@ -8,7 +8,7 @@ const ListNotes = ({ notes }) => {
             <span className="title">Title: {note.title}</span>
             <p>Date Created: {note.time}</p><br/>
             <audio controls="controls" src={note.audio} type='audio/mp3'/>
-            <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+            <a href="#!" onClick={e=>Delete(note.time)} class="secondary-content"><i class="material-icons">delete</i></a>
             
         </li>
     </div>)):null

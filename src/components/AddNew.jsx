@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import SpeechRecognition from "react-speech-recognition";
 import { ReactMic } from 'react-mic';
@@ -26,9 +26,9 @@ const Dictaphone = ({
 	const [audio, setAudio] = useState()
 	const [title, setTitle] = useState()
 
-	if (!browserSupportsSpeechRecognition) {
-		return 'Sorry, your browser is outdated, try using the latest version of Chrome';
-	}
+//	if (!browserSupportsSpeechRecognition) {
+//		return 'Sorry, your browser is outdated, try using the latest version of Chrome';
+//	}
 
 
 	const handleChange = () => {
@@ -88,8 +88,8 @@ const Dictaphone = ({
 			</div> {/*  container */}
 
 			{
-				note &&
-				<div className="trancsrip green lighten-4 ">
+				// note &&
+				<div className="trancsript green lighten-4 ">
 					<form onSubmit={handleSubmit} className="input-field container">
 						<input onChange={e => setTitle(e.target.value)} value={title} placeholder='Enter Title' type="text" required />
 						<h4>Transcript</h4>
