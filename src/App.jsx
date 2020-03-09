@@ -24,7 +24,7 @@ const App = () => {
     // const 
     console.log(time);
     const newNoteList = notes.filter(note=>{
-      return note.time != time
+      return note.time !== time
     })
     setNotes(newNoteList)    
   }
